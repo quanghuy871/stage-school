@@ -121,6 +121,68 @@ export type FormBuilder = {
   } & FormFields>;
 };
 
+export type TitleContentButtonImage = {
+  _type: "titleContentButtonImage";
+  title?: string;
+  image?: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+  };
+  richContent?: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "normal" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote";
+    listItem?: "bullet" | "number";
+    markDefs?: Array<{
+      href?: string;
+      _type: "link";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
+    _key: string;
+  }>;
+  buttons?: Array<{
+    _key: string;
+  } & Link>;
+};
+
+export type Cta = {
+  _type: "cta";
+  backgroundImage?: AccessibleImage;
+  title?: string;
+  richContent?: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "normal" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote";
+    listItem?: "bullet" | "number";
+    markDefs?: Array<{
+      href?: string;
+      _type: "link";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
+    _key: string;
+  }>;
+  link?: Link;
+};
+
 export type SeoPreferences = {
   _id: string;
   _type: "seoPreferences";
@@ -175,6 +237,58 @@ export type AccessibleImage = {
   caption?: string;
 };
 
+export type TitleFourColumn = {
+  _type: "titleFourColumn";
+  title?: string;
+  columns?: Array<{
+    image?: {
+      asset?: {
+        _ref: string;
+        _type: "reference";
+        _weak?: boolean;
+        [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+      };
+      hotspot?: SanityImageHotspot;
+      crop?: SanityImageCrop;
+      _type: "image";
+    };
+    title?: string;
+    description?: string;
+    _key: string;
+  }>;
+};
+
+export type TitleListButton = {
+  _type: "titleListButton";
+  title?: string;
+  list?: Array<string>;
+  button?: Link;
+};
+
+export type TitleContentButton = {
+  _type: "titleContentButton";
+  title?: string;
+  richContent?: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "normal" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote";
+    listItem?: "bullet" | "number";
+    markDefs?: Array<{
+      href?: string;
+      _type: "link";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
+    _key: string;
+  }>;
+  link?: Link;
+};
+
 export type LandingBanner = {
   _type: "landingBanner";
   title?: string;
@@ -213,7 +327,17 @@ export type Page = {
   slug?: Slug;
   content?: Array<{
     _key: string;
-  } & LandingBanner>;
+  } & LandingBanner | {
+    _key: string;
+  } & TitleContentButton | {
+    _key: string;
+  } & TitleListButton | {
+    _key: string;
+  } & TitleFourColumn | {
+    _key: string;
+  } & Cta | {
+    _key: string;
+  } & TitleContentButtonImage>;
 };
 
 export type CustomSeoMetaFields = {
@@ -388,7 +512,7 @@ export type SanityImageMetadata = {
   isOpaque?: boolean;
 };
 
-export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | FormSubmission | Form | FormFields | FormBuilder | SeoPreferences | Configuration | AccessibleImage | LandingBanner | Link | Page | CustomSeoMetaFields | MediaTag | Slug | MetaTag | MetaAttribute | SeoMetaFields | Twitter | OpenGraph | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata;
+export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | FormSubmission | Form | FormFields | FormBuilder | TitleContentButtonImage | Cta | SeoPreferences | Configuration | AccessibleImage | TitleFourColumn | TitleListButton | TitleContentButton | LandingBanner | Link | Page | CustomSeoMetaFields | MediaTag | Slug | MetaTag | MetaAttribute | SeoMetaFields | Twitter | OpenGraph | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata;
 export declare const internalGroqTypeReferenceTo: unique symbol;
 // Source: ./sanity/lib/api/queries.ts
 // Variable: getConfigurations
@@ -513,11 +637,160 @@ export type GetPageResult = {
   slug: string | null;
   content: Array<{
     _key: string;
+    _type: "cta";
+    backgroundImage?: AccessibleImage;
+    title?: string;
+    richContent?: Array<{
+      children?: Array<{
+        marks?: Array<string>;
+        text?: string;
+        _type: "span";
+        _key: string;
+      }>;
+      style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "normal";
+      listItem?: "bullet" | "number";
+      markDefs?: Array<{
+        href?: string;
+        _type: "link";
+        _key: string;
+      }>;
+      level?: number;
+      _type: "block";
+      _key: string;
+    }>;
+    link: {
+      _type: "link";
+      text?: string;
+      type?: string;
+      internalLink: {
+        _type: "page";
+        slug: Slug | null;
+        title: string | null;
+      } | null;
+      url?: string;
+      email?: string;
+      phone?: string;
+      value?: string;
+      blank?: boolean;
+      parameters?: string;
+      anchor?: string;
+    } | null;
+    form: null;
+  } | {
+    _key: string;
     _type: "landingBanner";
     title?: string;
     buttons?: Array<{
       _key: string;
     } & Link>;
+    link: null;
+    form: null;
+  } | {
+    _key: string;
+    _type: "titleContentButton";
+    title?: string;
+    richContent?: Array<{
+      children?: Array<{
+        marks?: Array<string>;
+        text?: string;
+        _type: "span";
+        _key: string;
+      }>;
+      style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "normal";
+      listItem?: "bullet" | "number";
+      markDefs?: Array<{
+        href?: string;
+        _type: "link";
+        _key: string;
+      }>;
+      level?: number;
+      _type: "block";
+      _key: string;
+    }>;
+    link: {
+      _type: "link";
+      text?: string;
+      type?: string;
+      internalLink: {
+        _type: "page";
+        slug: Slug | null;
+        title: string | null;
+      } | null;
+      url?: string;
+      email?: string;
+      phone?: string;
+      value?: string;
+      blank?: boolean;
+      parameters?: string;
+      anchor?: string;
+    } | null;
+    form: null;
+  } | {
+    _key: string;
+    _type: "titleContentButtonImage";
+    title?: string;
+    image?: {
+      asset?: {
+        _ref: string;
+        _type: "reference";
+        _weak?: boolean;
+        [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+      };
+      hotspot?: SanityImageHotspot;
+      crop?: SanityImageCrop;
+      _type: "image";
+    };
+    richContent?: Array<{
+      children?: Array<{
+        marks?: Array<string>;
+        text?: string;
+        _type: "span";
+        _key: string;
+      }>;
+      style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "normal";
+      listItem?: "bullet" | "number";
+      markDefs?: Array<{
+        href?: string;
+        _type: "link";
+        _key: string;
+      }>;
+      level?: number;
+      _type: "block";
+      _key: string;
+    }>;
+    buttons?: Array<{
+      _key: string;
+    } & Link>;
+    link: null;
+    form: null;
+  } | {
+    _key: string;
+    _type: "titleFourColumn";
+    title?: string;
+    columns?: Array<{
+      image?: {
+        asset?: {
+          _ref: string;
+          _type: "reference";
+          _weak?: boolean;
+          [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+        };
+        hotspot?: SanityImageHotspot;
+        crop?: SanityImageCrop;
+        _type: "image";
+      };
+      title?: string;
+      description?: string;
+      _key: string;
+    }>;
+    link: null;
+    form: null;
+  } | {
+    _key: string;
+    _type: "titleListButton";
+    title?: string;
+    list?: Array<string>;
+    button?: Link;
     link: null;
     form: null;
   }> | null;
