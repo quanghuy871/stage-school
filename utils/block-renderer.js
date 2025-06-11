@@ -4,6 +4,7 @@ import React from 'react';
 import LandingBanner from '@/components/blocks/landing-banner';
 import EmptyBlock from '@/components/blocks/empty-block';
 import TitleContentButton from '@/components/blocks/title-content-button';
+import TitleListButton from '@/components/blocks/title-list-button';
 
 export const BlockRendererContext = React.createContext(-1);
 
@@ -14,6 +15,8 @@ export const RenderBlock = ({ _type, ...props }) => {
       return <LandingBanner {...props} />;
     case 'titleContentButton':
       return <TitleContentButton {...props} />;
+    case 'titleListButton':
+      return <TitleListButton {...props} />;
     default:
       return <EmptyBlock>{_type}</EmptyBlock>;
   }

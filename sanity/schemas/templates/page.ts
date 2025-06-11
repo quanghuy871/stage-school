@@ -59,7 +59,7 @@ const page = {
       of: [
                { type: "landingBanner" },
                { type: "titleContentButton" },
-
+               { type: "titleListButton" },
       ],
     },
   ],
