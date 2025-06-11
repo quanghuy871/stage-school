@@ -4,9 +4,10 @@ import StructuredText from "@/primitives/structured-text";
 import parse from "html-react-parser";
 
 const Cta = ({ title, richContent, button, backgroundImage }) => {
+    console.log(backgroundImage)
     return (
         <section className="cta">
-            
+            <Asset asset={backgroundImage.asset} />
         </section>
     );
 };

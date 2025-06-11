@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "@/primitives/link";
-import Logo from "@/sanity/src/theme/components/logo";
+import { Logo } from "@/components/blocks/icons";
 
 const Footer = () => {
   return (
