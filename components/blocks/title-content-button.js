@@ -15,7 +15,7 @@ const TitleContentButton = ({ title, richContent, link }) => {
           )}
         </div>
         <div className="grid md:grid-cols-2 grid-cols-1">
-          <div className="flex flex-col gap-8 col-start-2 md:border-l border-primary pl-[14px]">
+          <div className="flex flex-col gap-8 col-start-2 md:border-l border-primary md:pl-[14px]">
             {richContent && <StructuredText data={richContent} />}
             {link && (
               <Link
