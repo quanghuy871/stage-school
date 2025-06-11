@@ -1,0 +1,47 @@
+<svg viewBox="0 0 100 100" preserveAspectRatio="none">
+  <defs>
+    <mask id="photoMask">
+      <rect class="mask-rect" x="0" y="0" width="100" height="100" fill="white" />
+    </mask>
+  </defs>
+  
+  <!-- Rectangles based on verticalOrder mapping for 3 rows -->
+  <rect class="vertical-1 bg-secondary" x="0" y="0" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-2 bg-secondary" x="8.33" y="0" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-3 bg-secondary" x="16.66" y="0" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-4 bg-secondary" x="24.99" y="0" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-5 bg-secondary" x="33.32" y="0" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-6 bg-secondary" x="41.65" y="0" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-7 bg-secondary" x="49.98" y="0" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-8 bg-secondary" x="58.31" y="0" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-9 bg-secondary" x="66.64" y="0" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-10 bg-secondary" x="74.97" y="0" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-11 bg-secondary" x="83.3" y="0" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-12 bg-secondary" x="91.63" y="0" width="8.33" height="33.33" fill="white"/>
+  
+  <rect class="vertical-13 bg-secondary" x="0" y="33.33" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-14 bg-secondary" x="8.33" y="33.33" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-15 bg-secondary" x="16.66" y="33.33" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-16 bg-secondary" x="24.99" y="33.33" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-17 bg-secondary" x="33.32" y="33.33" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-18 bg-secondary" x="41.65" y="33.33" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-19 bg-secondary" x="49.98" y="33.33" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-20 bg-secondary" x="58.31" y="33.33" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-21 bg-secondary" x="66.64" y="33.33" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-22 bg-secondary" x="74.97" y="33.33" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-23 bg-secondary" x="83.3" y="33.33" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-24 bg-secondary" x="91.63" y="33.33" width="8.33" height="33.33" fill="white"/>
+  
+  <rect class="vertical-25 bg-secondary" x="0" y="66.66" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-26 bg-secondary" x="8.33" y="66.66" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-27 bg-secondary" x="16.66" y="66.66" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-28 bg-secondary" x="24.99" y="66.66" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-29 bg-secondary" x="33.32" y="66.66" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-30 bg-secondary" x="41.65" y="66.66" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-31 bg-secondary" x="49.98" y="66.66" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-32 bg-secondary" x="58.31" y="66.66" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-33 bg-secondary" x="66.64" y="66.66" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-34 bg-secondary" x="74.97" y="66.66" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-35 bg-secondary" x="83.3" y="66.66" width="8.33" height="33.33" fill="white"/>
+  <rect class="vertical-36 bg-secondary" x="91.63" y="66.66" width="8.33" height="33.33" fill="white"/>
+</svg>

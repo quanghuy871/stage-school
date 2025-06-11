@@ -1,0 +1,21 @@
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-charcoal font-sans font-[400];
+  }
+
+  h1 {
+    @apply text-heading-h1;
+  }
+
+  h2 {
+    @apply text-heading-h2;
+  }
+
+  h3 {
+    @apply text-heading-h3;
+  }
+
+  p, ul, li, ol, div, table {
+    @apply text-charcoal text-paragraph-p1 font-sans font-[350];
+  }
+}

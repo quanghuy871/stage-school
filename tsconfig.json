@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "paths": {
+      "@/*": ["./*"],
+      "@/components/*": ["./components/*"]
+    },
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
+  },
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx"
+, "utils/render-blocks.js", "app/(site)/[slug]/page.tsx", "utils/block-renderer.js", "primitives/helmet/index.js", "app/(studio)/studio/[[...index]]/page.tsx", "components/blocks/crafted-block.js", "utils/generate-metadata.ts", "app/page.jsx", "app/page.js", "primitives/form/index.js"  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

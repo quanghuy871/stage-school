@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "keen-slider/keen-slider.min.css";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  @apply bg-secondary;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  // @apply overflow-hidden;
+}
+
+.solution-slider .bg-this img {
+  height: auto !important;
+}
+
+@import "global/fonts";
+@import "global/base";
+@import "global/components";
+@import "global/utils";
