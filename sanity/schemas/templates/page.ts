@@ -60,6 +60,7 @@ const page = {
                { type: "landingBanner" },
                { type: "titleContentButton" },
                { type: "titleListButton" },
+               { type: "titleFourColumn" },
       ],
     },
   ],

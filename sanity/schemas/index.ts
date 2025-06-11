@@ -12,12 +12,14 @@ import formFields from "./objects/form-fields";
 import landingBanner from "./blocks/landing-banner";
 import titleContentButton from "./blocks/title-content-button";
 import titleListButton from "./blocks/title-list-button";
+import titleFourColumn from "./blocks/title-four-column";
 
 const schemas = [
     page,
     landingBanner,
     titleContentButton,
     titleListButton,
+    titleFourColumn,
     configuration,
     accessibleImage,
     seoPreferences,
