@@ -51,9 +51,11 @@ export default {
         lime: "#87E837",
         vermillion: "#FF3D2A",
         orange: "#FF8000",
+        primaryOrange: "#FF970F",
         purple: "#E256D3",
         neutrals30: "#B3B3B3",
         neutrals60: "#666",
+        cyan: "#32B9F5",
       },
       padding: {
         15: "60px",
