@@ -61,6 +61,8 @@ const page = {
                { type: "titleContentButton" },
                { type: "titleListButton" },
                { type: "titleFourColumn" },
+               { type: "cta" },
+               { type: "titleContentButtonImage" },
       ],
     },
   ],

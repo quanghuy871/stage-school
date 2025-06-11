@@ -13,6 +13,8 @@ import landingBanner from "./blocks/landing-banner";
 import titleContentButton from "./blocks/title-content-button";
 import titleListButton from "./blocks/title-list-button";
 import titleFourColumn from "./blocks/title-four-column";
+import cta from "./blocks/cta";
+import titleContentButtonImage from "./blocks/title-content-button-image";
 
 const schemas = [
     page,
@@ -23,6 +25,8 @@ const schemas = [
     configuration,
     accessibleImage,
     seoPreferences,
+    cta,
+    titleContentButtonImage,
     formBuilder,
     formFields,
     form,

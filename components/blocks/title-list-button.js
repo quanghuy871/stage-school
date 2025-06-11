@@ -26,11 +26,11 @@ const TitleListButton = ({ title, list, button }) => {
             ))}
           </div>
 
-          <div className="flex items-center max-w-[100px] h-[36px] px-3 py-[7px] rounded-full bg-primary md:self-end self-start">
+          <div className="flex items-center max-w-[100px] h-[36px] px-3 py-[7px] rounded-full bg-primary  seft-start md:self-end">
             {button && (
               <Link
                 to={button}
-                className="text-paragraph-p1 leading-[22px] text-[#FF970F] text-sm whitespace-nowrap"
+                className="text-paragraph-p1 leading-[22px] text-[#FF970F] text-sm"
               >
                 {parse(button?.text)}
               </Link>
