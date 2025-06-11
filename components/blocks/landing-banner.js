@@ -3,11 +3,11 @@ import Link from "@/primitives/link";
 import parse from "html-react-parser";
 
 const LandingBanner = ({ title, buttons }) => {
-    
+
     return (
         <section className="landing-banner">
             <div className="inner">
-                <div>
+                <div className="">
                     {title && <h2>{parse(title)}</h2>}
                     <div>
                         {buttons.map((button, index) => (
