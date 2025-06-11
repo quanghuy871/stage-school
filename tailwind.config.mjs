@@ -25,6 +25,7 @@ export default {
                 "heading-h1": ["48px", "52px"],
                 "heading-h2": ["44px", "50px"],
                 "heading-h3": ["36px", "44px"],
+                "heading-h4": ["32px", "36px"],
                 "subheading-s1": ["28px", "30px"],
                 "subheading-s2": ["24px", "30px"],
                 "subheading-s3": ["20px", "26px"],
