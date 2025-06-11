@@ -6,6 +6,8 @@ import EmptyBlock from '@/components/blocks/empty-block';
 import TitleContentButton from '@/components/blocks/title-content-button';
 import TitleListButton from '@/components/blocks/title-list-button';
 import TitleFourColumn from '@/components/blocks/title-four-columns';
+import Cta from '@/components/blocks/cta';
+import TitleContentButtonImage from '@/components/blocks/title-content-button-image';
 
 export const BlockRendererContext = React.createContext(-1);
 
@@ -20,6 +22,10 @@ export const RenderBlock = ({ _type, ...props }) => {
       return <TitleListButton {...props} />;
     case 'titleFourColumn':
       return <TitleFourColumn {...props} />;
+    case 'cta':
+      return <Cta {...props} />;
+    case 'titleContentButtonImage':
+      return <TitleContentButtonImage {...props} />;
     default:
       return <EmptyBlock>{_type}</EmptyBlock>;
   }

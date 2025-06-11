@@ -4,17 +4,17 @@ import parse from "html-react-parser";
 
 const TitleListButton = ({ title, list, button }) => {
   return (
-    <section className="title-list-button">
-      <div className="inner bg-orange w-[1600px] h-[705px] p-7 flex flex-col justify-between ">
-        <div className="w-[1035px] h-[220px] ">
+    <section className="title-list-button bg-orange md:h-[705px]">
+      <div className="inner md:h-full p-7 flex flex-col justify-between">
+        <div className="md:max-w-[1035px]">
           {title && (
-            <h2 className="font-dm-sans font-bold text-heading-h3  leading-[44px] tracking[-0,3px]  align-bottom">
+            <h2 className="font-bold text-heading-h3 leading-[44px] tracking-[-0.3px] align-bottom">
               {parse(title)}
             </h2>
           )}
         </div>
 
-        <div className="flex flex-row justify-between w-[1440px] h-[705px] p-7 items-end mt-auto pl-1  ">
+        <div className="flex flex-row justify-between p-7 items-end mt-auto pl-1">
           <div className="">
             {list.map((item, index) => (
               <p
@@ -25,11 +25,11 @@ const TitleListButton = ({ title, list, button }) => {
               </p>
             ))}
           </div>
-          <div className="flex items-center w-[100px] h-[36px] px-3 py-[7px] gap-[10px] rounded-full bg-primary text-white self-end">
+          <div className="flex items-center max-w-[100px] h-[36px] px-3 py-[7px] gap-[10px] rounded-full bg-primary text-white self-end">
             {button && (
               <Link
                 to={button}
-                className=" w-[76px ] h-[22px] text-paragraph-p1 font-elza-text w-[400] leading-[22px] text-[#FF970F] "
+                className="text-paragraph-p1 w-[400] leading-[22px] text-[#FF970F]"
               >
                 {parse(button?.text)}
               </Link>
