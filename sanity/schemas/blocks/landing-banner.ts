@@ -21,6 +21,11 @@ export default {
       type: "string",
     },
     {
+      name: "video",
+      title: "Video",
+      type: "string",
+    },
+    {
       name: "buttons",
       title: "Buttons",
       type: "array",
