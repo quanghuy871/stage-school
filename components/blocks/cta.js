@@ -4,7 +4,6 @@ import StructuredText from "@/primitives/structured-text";
 import parse from "html-react-parser";
 
 const Cta = ({ title, richContent, backgroundImage, link }) => {
-    console.log(backgroundImage)
   return (
     <section className="cta relative h-[468px]">
       <div className="inner">
