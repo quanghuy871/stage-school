@@ -5,7 +5,7 @@ import parse from "html-react-parser";
 
 const TitleContentButtonImage = ({ title, image, richContent, buttons }) => {
   return (
-    <section className="title-content-button-image bg-primaryOrange md:h-screen h-[752px] flex items-end">
+    <section className="title-content-button-image bg-primaryOrange md:h-[850px] h-[752px] flex items-end">
       <div className="inner">
         <div className="flex flex-col md:gap-7 gap-3 md:pt-7 md:pb-7 pb-4 pt-11">
           {title && (
@@ -16,7 +16,7 @@ const TitleContentButtonImage = ({ title, image, richContent, buttons }) => {
                   <div className="md:hidden flex border border-primary border-b-0 w-100 h-3">
                       
                   </div>
-          <div className="grid md:grid-cols-2 md:gap-0 gap-8">
+          <div className="grid md:grid-cols-2 md:h-[400px] md:gap-0 gap-8">
             <div className="max-w-[400px] flex flex-col md:gap-5 gap-8 justify-end">
               {richContent && (
                 <StructuredText
@@ -36,8 +36,8 @@ const TitleContentButtonImage = ({ title, image, richContent, buttons }) => {
                 ))}
               </div>
             </div>
-            <div className="">
-              <Asset asset={image} className="h-full md:!aspect-[686/400]" />
+            <div className="h-[400px]">
+              <Asset asset={image} className="h-full" />
             </div>
           </div>
         </div>
