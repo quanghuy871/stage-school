@@ -1,14 +1,14 @@
 /* eslint-disable react/jsx-props-no-spreading, react/prop-types, import/no-cycle */
-"use client";
-import React from "react";
-import LandingBanner from "@/components/blocks/landing-banner";
-import EmptyBlock from "@/components/blocks/empty-block";
-import TitleContentButton from "@/components/blocks/title-content-button";
-import TitleListButton from "@/components/blocks/title-list-button";
-import TitleFourColumn from "@/components/blocks/title-four-columns";
-import Cta from "@/components/blocks/cta";
-import TitleContentButtonImage from "@/components/blocks/title-content-button-image";
-import TitleAnimation from "@/components/blocks/title-animation";
+"use client"
+import React from 'react';
+import LandingBanner from '@/components/blocks/landing-banner';
+import EmptyBlock from '@/components/blocks/empty-block';
+import TitleContentButton from '@/components/blocks/title-content-button';
+import TitleListButton from '@/components/blocks/title-list-button';
+import TitleFourColumn from '@/components/blocks/title-four-columns';
+import Cta from '@/components/blocks/cta';
+import TitleContentButtonImage from '@/components/blocks/title-content-button-image';
+import TitleAnimation from '@/components/blocks/title-animation';
 
 export const BlockRendererContext = React.createContext(-1);
 
@@ -28,6 +28,8 @@ export const RenderBlock = ({ _type, ...props }) => {
       return <Cta {...props} />;
     case "titleContentButtonImage":
       return <TitleContentButtonImage {...props} />;
+    case 'titleAnimation':
+      return <TitleAnimation {...props} />;
     default:
       return <EmptyBlock>{_type}</EmptyBlock>;
   }

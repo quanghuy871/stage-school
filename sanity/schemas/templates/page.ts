@@ -1,14 +1,23 @@
 import { BookIcon } from "@sanity/icons";
 
 const page = {
-  name: "page",
-  title: "Pages",
-  type: "document",
-  icon: BookIcon,
-  preview: {
-    select: {
-      title: "title",
-      isDraft: "_id",
+    name: "page",
+    title: "Pages",
+    type: "document",
+    icon: BookIcon,
+    preview: {
+        select: {
+            title: "title",
+            isDraft: "_id",
+        },
+        prepare(selection) {
+            const { title, isDraft } = selection;
+            const status = isDraft.startsWith("drafts.") ? "Draft" : "Published";
+            return {
+                title,
+                subtitle: status,
+            };
+        },
     },
     prepare(selection) {
       const { title, isDraft } = selection;

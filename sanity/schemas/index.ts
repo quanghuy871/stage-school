@@ -16,6 +16,10 @@ import titleFourColumn from "./blocks/title-four-column";
 import cta from "./blocks/cta";
 import titleContentButtonImage from "./blocks/title-content-button-image";
 import titleAnimation from "./blocks/title-animation";
+import faq from "./blocks/faq";
+import imageTitleContentButton from "./blocks/image-title-content-button";
+import doubleImage from "./blocks/double-image";
+import courseIntro from "./blocks/course-intro";
 
 const schemas = [
     page,
@@ -34,6 +38,10 @@ const schemas = [
     form,
     formSubmission,
     seoSchema,
+    courseIntro,
+    doubleImage,
+    imageTitleContentButton,
+    faq,
 ];
 
 export default schemas;
