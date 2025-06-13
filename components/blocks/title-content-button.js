@@ -5,8 +5,8 @@ import Link from "@/primitives/link";
 
 const TitleContentButton = ({ title, richContent, link }) => {
   return (
-    <section className="title-content-button">
-      <div className="inner pt-11 pb-[72px] flex flex-col md:gap-14 gap-8">
+    <section className="title-content-button pt-11 pb-[72px] md:pb-[80px] flex">
+      <div className="inner flex flex-col md:gap-14 gap-8">
         <div className="max-w-[918]">
           {title && (
             <h2 className="md:text-heading-h1 text-heading-h4 font-[700] tracking-[-2px]">

@@ -68,6 +68,153 @@ export type Geopoint = {
   alt?: number;
 };
 
+export type Faq = {
+  _type: "faq";
+  subtitle?: string;
+  title?: string;
+  richContent?: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "normal" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote";
+    listItem?: "bullet" | "number";
+    markDefs?: Array<{
+      href?: string;
+      _type: "link";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
+    _key: string;
+  }>;
+  buttons?: Array<{
+    _key: string;
+  } & Link>;
+  items?: Array<{
+    title?: string;
+    richContent?: Array<{
+      children?: Array<{
+        marks?: Array<string>;
+        text?: string;
+        _type: "span";
+        _key: string;
+      }>;
+      style?: "normal" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote";
+      listItem?: "bullet" | "number";
+      markDefs?: Array<{
+        href?: string;
+        _type: "link";
+        _key: string;
+      }>;
+      level?: number;
+      _type: "block";
+      _key: string;
+    }>;
+    _type: "item";
+    _key: string;
+  }>;
+};
+
+export type ImageTitleContentButton = {
+  _type: "imageTitleContentButton";
+  title?: string;
+  image?: AccessibleImage;
+  richContent?: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "normal" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote";
+    listItem?: "bullet" | "number";
+    markDefs?: Array<{
+      href?: string;
+      _type: "link";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
+    _key: string;
+  }>;
+  link?: Link;
+};
+
+export type DoubleImage = {
+  _type: "doubleImage";
+  firstImage?: AccessibleImage;
+  secondImage?: AccessibleImage;
+};
+
+export type CourseIntro = {
+  _type: "courseIntro";
+  subtitle?: string;
+  title?: string;
+  richContent?: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "normal" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote";
+    listItem?: "bullet" | "number";
+    markDefs?: Array<{
+      href?: string;
+      _type: "link";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
+    _key: string;
+  }>;
+  link?: Link;
+  items?: Array<{
+    title?: string;
+    firstRichContent?: Array<{
+      children?: Array<{
+        marks?: Array<string>;
+        text?: string;
+        _type: "span";
+        _key: string;
+      }>;
+      style?: "normal" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote";
+      listItem?: "bullet" | "number";
+      markDefs?: Array<{
+        href?: string;
+        _type: "link";
+        _key: string;
+      }>;
+      level?: number;
+      _type: "block";
+      _key: string;
+    }>;
+    secondRichContent?: Array<{
+      children?: Array<{
+        marks?: Array<string>;
+        text?: string;
+        _type: "span";
+        _key: string;
+      }>;
+      style?: "normal" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote";
+      listItem?: "bullet" | "number";
+      markDefs?: Array<{
+        href?: string;
+        _type: "link";
+        _key: string;
+      }>;
+      level?: number;
+      _type: "block";
+      _key: string;
+    }>;
+    _type: "item";
+    _key: string;
+  }>;
+};
+
 export type FormSubmission = {
   _id: string;
   _type: "formSubmission";
@@ -119,6 +266,40 @@ export type FormBuilder = {
   formFields?: Array<{
     _key: string;
   } & FormFields>;
+};
+
+export type TitleAnimation = {
+  _type: "titleAnimation";
+  title?: string;
+  richContent?: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "normal" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote";
+    listItem?: "bullet" | "number";
+    markDefs?: Array<{
+      href?: string;
+      _type: "link";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
+    _key: string;
+  }>;
+  items?: Array<{
+    title?: string;
+    subtitle?: string;
+    color?: "vermillion" | "lime" | "orange" | "cyan";
+    image?: AccessibleImage;
+    tag?: string;
+    link?: Link;
+    _type: "item";
+    _key: string;
+  }>;
+  link?: Link;
 };
 
 export type TitleContentButtonImage = {
@@ -220,23 +401,6 @@ export type Configuration = {
   offcanvasBackground?: AccessibleImage;
 };
 
-export type AccessibleImage = {
-  _type: "accessibleImage";
-  asset?: {
-    asset?: {
-      _ref: string;
-      _type: "reference";
-      _weak?: boolean;
-      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
-    };
-    hotspot?: SanityImageHotspot;
-    crop?: SanityImageCrop;
-    _type: "image";
-  };
-  alt?: string;
-  caption?: string;
-};
-
 export type TitleFourColumn = {
   _type: "titleFourColumn";
   title?: string;
@@ -292,28 +456,10 @@ export type TitleContentButton = {
 export type LandingBanner = {
   _type: "landingBanner";
   title?: string;
+  video?: string;
   buttons?: Array<{
     _key: string;
   } & Link>;
-};
-
-export type Link = {
-  _type: "link";
-  text?: string;
-  type?: string;
-  internalLink?: {
-    _ref: string;
-    _type: "reference";
-    _weak?: boolean;
-    [internalGroqTypeReferenceTo]?: "page";
-  };
-  url?: string;
-  email?: string;
-  phone?: string;
-  value?: string;
-  blank?: boolean;
-  parameters?: string;
-  anchor?: string;
 };
 
 export type Page = {
@@ -337,7 +483,53 @@ export type Page = {
     _key: string;
   } & Cta | {
     _key: string;
-  } & TitleContentButtonImage>;
+  } & TitleContentButtonImage | {
+    _key: string;
+  } & TitleAnimation | {
+    _key: string;
+  } & Faq | {
+    _key: string;
+  } & ImageTitleContentButton | {
+    _key: string;
+  } & DoubleImage | {
+    _key: string;
+  } & CourseIntro>;
+};
+
+export type Link = {
+  _type: "link";
+  text?: string;
+  type?: string;
+  internalLink?: {
+    _ref: string;
+    _type: "reference";
+    _weak?: boolean;
+    [internalGroqTypeReferenceTo]?: "page";
+  };
+  url?: string;
+  email?: string;
+  phone?: string;
+  value?: string;
+  blank?: boolean;
+  parameters?: string;
+  anchor?: string;
+};
+
+export type AccessibleImage = {
+  _type: "accessibleImage";
+  asset?: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+  };
+  alt?: string;
+  caption?: string;
 };
 
 export type CustomSeoMetaFields = {
@@ -512,7 +704,7 @@ export type SanityImageMetadata = {
   isOpaque?: boolean;
 };
 
-export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | FormSubmission | Form | FormFields | FormBuilder | TitleContentButtonImage | Cta | SeoPreferences | Configuration | AccessibleImage | TitleFourColumn | TitleListButton | TitleContentButton | LandingBanner | Link | Page | CustomSeoMetaFields | MediaTag | Slug | MetaTag | MetaAttribute | SeoMetaFields | Twitter | OpenGraph | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata;
+export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | Faq | ImageTitleContentButton | DoubleImage | CourseIntro | FormSubmission | Form | FormFields | FormBuilder | TitleAnimation | TitleContentButtonImage | Cta | SeoPreferences | Configuration | TitleFourColumn | TitleListButton | TitleContentButton | LandingBanner | Page | Link | AccessibleImage | CustomSeoMetaFields | MediaTag | Slug | MetaTag | MetaAttribute | SeoMetaFields | Twitter | OpenGraph | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata;
 export declare const internalGroqTypeReferenceTo: unique symbol;
 // Source: ./sanity/lib/api/queries.ts
 // Variable: getConfigurations
@@ -637,6 +829,88 @@ export type GetPageResult = {
   slug: string | null;
   content: Array<{
     _key: string;
+    _type: "courseIntro";
+    subtitle?: string;
+    title?: string;
+    richContent?: Array<{
+      children?: Array<{
+        marks?: Array<string>;
+        text?: string;
+        _type: "span";
+        _key: string;
+      }>;
+      style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "normal";
+      listItem?: "bullet" | "number";
+      markDefs?: Array<{
+        href?: string;
+        _type: "link";
+        _key: string;
+      }>;
+      level?: number;
+      _type: "block";
+      _key: string;
+    }>;
+    link: {
+      _type: "link";
+      text?: string;
+      type?: string;
+      internalLink: {
+        _type: "page";
+        slug: Slug | null;
+        title: string | null;
+      } | null;
+      url?: string;
+      email?: string;
+      phone?: string;
+      value?: string;
+      blank?: boolean;
+      parameters?: string;
+      anchor?: string;
+    } | null;
+    items?: Array<{
+      title?: string;
+      firstRichContent?: Array<{
+        children?: Array<{
+          marks?: Array<string>;
+          text?: string;
+          _type: "span";
+          _key: string;
+        }>;
+        style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "normal";
+        listItem?: "bullet" | "number";
+        markDefs?: Array<{
+          href?: string;
+          _type: "link";
+          _key: string;
+        }>;
+        level?: number;
+        _type: "block";
+        _key: string;
+      }>;
+      secondRichContent?: Array<{
+        children?: Array<{
+          marks?: Array<string>;
+          text?: string;
+          _type: "span";
+          _key: string;
+        }>;
+        style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "normal";
+        listItem?: "bullet" | "number";
+        markDefs?: Array<{
+          href?: string;
+          _type: "link";
+          _key: string;
+        }>;
+        level?: number;
+        _type: "block";
+        _key: string;
+      }>;
+      _type: "item";
+      _key: string;
+    }>;
+    form: null;
+  } | {
+    _key: string;
     _type: "cta";
     backgroundImage?: AccessibleImage;
     title?: string;
@@ -678,12 +952,162 @@ export type GetPageResult = {
     form: null;
   } | {
     _key: string;
+    _type: "doubleImage";
+    firstImage?: AccessibleImage;
+    secondImage?: AccessibleImage;
+    link: null;
+    form: null;
+  } | {
+    _key: string;
+    _type: "faq";
+    subtitle?: string;
+    title?: string;
+    richContent?: Array<{
+      children?: Array<{
+        marks?: Array<string>;
+        text?: string;
+        _type: "span";
+        _key: string;
+      }>;
+      style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "normal";
+      listItem?: "bullet" | "number";
+      markDefs?: Array<{
+        href?: string;
+        _type: "link";
+        _key: string;
+      }>;
+      level?: number;
+      _type: "block";
+      _key: string;
+    }>;
+    buttons?: Array<{
+      _key: string;
+    } & Link>;
+    items?: Array<{
+      title?: string;
+      richContent?: Array<{
+        children?: Array<{
+          marks?: Array<string>;
+          text?: string;
+          _type: "span";
+          _key: string;
+        }>;
+        style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "normal";
+        listItem?: "bullet" | "number";
+        markDefs?: Array<{
+          href?: string;
+          _type: "link";
+          _key: string;
+        }>;
+        level?: number;
+        _type: "block";
+        _key: string;
+      }>;
+      _type: "item";
+      _key: string;
+    }>;
+    link: null;
+    form: null;
+  } | {
+    _key: string;
+    _type: "imageTitleContentButton";
+    title?: string;
+    image?: AccessibleImage;
+    richContent?: Array<{
+      children?: Array<{
+        marks?: Array<string>;
+        text?: string;
+        _type: "span";
+        _key: string;
+      }>;
+      style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "normal";
+      listItem?: "bullet" | "number";
+      markDefs?: Array<{
+        href?: string;
+        _type: "link";
+        _key: string;
+      }>;
+      level?: number;
+      _type: "block";
+      _key: string;
+    }>;
+    link: {
+      _type: "link";
+      text?: string;
+      type?: string;
+      internalLink: {
+        _type: "page";
+        slug: Slug | null;
+        title: string | null;
+      } | null;
+      url?: string;
+      email?: string;
+      phone?: string;
+      value?: string;
+      blank?: boolean;
+      parameters?: string;
+      anchor?: string;
+    } | null;
+    form: null;
+  } | {
+    _key: string;
     _type: "landingBanner";
     title?: string;
+    video?: string;
     buttons?: Array<{
       _key: string;
     } & Link>;
     link: null;
+    form: null;
+  } | {
+    _key: string;
+    _type: "titleAnimation";
+    title?: string;
+    richContent?: Array<{
+      children?: Array<{
+        marks?: Array<string>;
+        text?: string;
+        _type: "span";
+        _key: string;
+      }>;
+      style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "normal";
+      listItem?: "bullet" | "number";
+      markDefs?: Array<{
+        href?: string;
+        _type: "link";
+        _key: string;
+      }>;
+      level?: number;
+      _type: "block";
+      _key: string;
+    }>;
+    items?: Array<{
+      title?: string;
+      subtitle?: string;
+      color?: "cyan" | "lime" | "orange" | "vermillion";
+      image?: AccessibleImage;
+      tag?: string;
+      link?: Link;
+      _type: "item";
+      _key: string;
+    }>;
+    link: {
+      _type: "link";
+      text?: string;
+      type?: string;
+      internalLink: {
+        _type: "page";
+        slug: Slug | null;
+        title: string | null;
+      } | null;
+      url?: string;
+      email?: string;
+      phone?: string;
+      value?: string;
+      blank?: boolean;
+      parameters?: string;
+      anchor?: string;
+    } | null;
     form: null;
   } | {
     _key: string;
