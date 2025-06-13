@@ -15,6 +15,7 @@ import titleListButton from "./blocks/title-list-button";
 import titleFourColumn from "./blocks/title-four-column";
 import cta from "./blocks/cta";
 import titleContentButtonImage from "./blocks/title-content-button-image";
+import titleAnimation from "./blocks/title-animation";
 
 const schemas = [
     page,
@@ -27,6 +28,7 @@ const schemas = [
     seoPreferences,
     cta,
     titleContentButtonImage,
+    titleAnimation,
     formBuilder,
     formFields,
     form,

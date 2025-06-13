@@ -8,6 +8,7 @@ import TitleListButton from '@/components/blocks/title-list-button';
 import TitleFourColumn from '@/components/blocks/title-four-columns';
 import Cta from '@/components/blocks/cta';
 import TitleContentButtonImage from '@/components/blocks/title-content-button-image';
+import TitleAnimation from '@/components/blocks/title-animation';
 
 export const BlockRendererContext = React.createContext(-1);
 
@@ -26,6 +27,8 @@ export const RenderBlock = ({ _type, ...props }) => {
       return <Cta {...props} />;
     case 'titleContentButtonImage':
       return <TitleContentButtonImage {...props} />;
+    case 'titleAnimation':
+      return <TitleAnimation {...props} />;
     default:
       return <EmptyBlock>{_type}</EmptyBlock>;
   }
