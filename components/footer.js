@@ -1,10 +1,13 @@
 "use client";
 import React, { useState } from "react";
-import Link from "@/primitives/link";
-import Logo from "@/sanity/src/theme/components/logo";
+import {Link} from "@/primitives";
 import down from "@/assets/images/chevron-down.svg";
 import Image from "next/image";
+import {RainbowLogo, Logo} from "./blocks/icons";
+
+
 const Footer = () => {
+
   const [isActive, setActive] = useState(null);
   return (
     <footer className="h-screen bg-primary md:pt-7 pt-8 md:pb-5 pb-4">
@@ -56,7 +59,10 @@ const Footer = () => {
         </div>
         <div className="flex flex-col gap-9">
           <div className="md:grid md:grid-cols-2 flex flex-col-reverse md:gap-0 gap-10">
-            <Logo />
+            <Link to={"/"} className="flex gap-[19px] items-center md:ml-[-30px]">
+              <RainbowLogo />
+              <Logo/>
+            </Link>
             <div className="flex flex-col gap-5">
               <h2 className="md:text-heading-h2 text-subheading-s1 font-[700] text-secondary">
                 The home of performing arts for young Australians
