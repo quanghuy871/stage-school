@@ -1,6 +1,6 @@
 export default {
-    name: "landingBanner",
-    title: "Landing Banner",
+    name: "imageTitleContentButton",
+    title: "Image Title Content Button",
     type: "object",
     preview: {
         select: {
@@ -10,7 +10,7 @@ export default {
             const { title } = selection;
             return {
                 title,
-                subtitle: "Landing Banner",
+                subtitle: "Image Title Content Button",
             };
         },
     },
@@ -21,22 +21,27 @@ export default {
             type: "string",
         },
         {
-            name: "video",
-            title: "Video",
-            type: "string",
+            name: "image",
+            title: "Image",
+            type: "accessibleImage",
         },
         {
-            name: "buttons",
-            title: "Buttons",
+            name: "richContent",
+            title: "Rich Content",
             type: "array",
             of: [
                 {
-                    type: "link",
-                    options: {
-                        enableText: true,
-                    },
+                    type: "block",
                 },
             ],
+        },
+        {
+            name: "link",
+            title: "Link",
+            type: "link",
+            options: {
+                enableText: true,
+            },
         },
     ],
 };
