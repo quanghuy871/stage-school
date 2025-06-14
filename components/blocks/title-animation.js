@@ -125,10 +125,10 @@ const TitleAnimation = ({ title, items, richContent, link }) => {
                 >
                   {item.subtitle && (
                     <>
-                      <div class="overflow-hidden w-[120px] h-full absolute z-[2] right-0 flex items-center justify-center group-hover:opacity-100 opacity-0 st-transition -rotate-90">
+                      <div className="overflow-hidden w-[120px] h-full absolute z-[2] right-0 flex items-center justify-center group-hover:opacity-100 opacity-0 st-transition -rotate-90">
                         <p className="text-caption-c1">{item.subtitle}</p>
                       </div>
-                      <div class="overflow-hidden w-[120px] h-full absolute z-[2] left-0 flex items-center justify-center group-hover:opacity-100 opacity-0 st-transition -rotate-90">
+                      <div className="overflow-hidden w-[120px] h-full absolute z-[2] left-0 flex items-center justify-center group-hover:opacity-100 opacity-0 st-transition -rotate-90">
                         <p className="text-caption-c1">{item.subtitle}</p>
                       </div>
                     </>
