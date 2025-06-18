@@ -29,7 +29,7 @@ export const RenderBlock = ({ _type, ...props }) => {
     case "cta":
       return <Cta {...props} />;
     case "titleContentButtonImage":
-      return <TitleContentButtonImage {...props} />;
+      return <TitleContentButtonImage {...props} />;a
     case 'titleAnimation':
       return <TitleAnimation {...props} />;
     case 'doubleImage':
