@@ -10,6 +10,7 @@ import Cta from '@/components/blocks/cta';
 import TitleContentButtonImage from '@/components/blocks/title-content-button-image';
 import TitleAnimation from '@/components/blocks/title-animation';
 import DoubleImage from '@/components/blocks/double-image';
+import CourseIntro from '@/components/blocks/course-intro';
 
 export const BlockRendererContext = React.createContext(-1);
 
@@ -33,6 +34,8 @@ export const RenderBlock = ({ _type, ...props }) => {
       return <TitleAnimation {...props} />;
     case 'doubleImage':
       return <DoubleImage {...props} />;
+    case 'courseIntro':
+      return <CourseIntro {...props} />;
     default:
       return <EmptyBlock>{_type}</EmptyBlock>;
   }
